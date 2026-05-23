@@ -129,7 +129,7 @@ section { position: relative; }
   background: var(--gradient); z-index: 2000; box-shadow: var(--glow); }
 
 /* ===== Section base ===== */
-.section { padding: 72px 0; }
+.section { padding: 60px 0; }
 /* Anchored sections land cleanly below the fixed navbar */
 section[id], header[id] { scroll-margin-top: 76px; }
 /* Contact: compact so the whole form fits in one view */
