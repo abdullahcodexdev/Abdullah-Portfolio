@@ -133,7 +133,7 @@ section { position: relative; }
 /* Anchored sections land cleanly below the fixed navbar */
 section[id], header[id] { scroll-margin-top: 76px; }
 /* Contact: compact so the whole form fits in one view */
-#contact { padding: 24px 0 28px; }
+#contact { padding: 24px 0 56px; }
 #contact .section-head { margin-bottom: 6px; }
 #contact .section-title { font-size: clamp(1.6rem, 3vw, 2.1rem); }
 #contact .section-sub { margin-top: 6px; margin-bottom: 0; }
@@ -443,7 +443,7 @@ section[id], header[id] { scroll-margin-top: 76px; }
 .form-success.show { display: block; animation: fadeInUp .5s ease both; }
 
 /* ===== Footer ===== */
-.footer { padding: 70px 0 30px; background: var(--bg-2); border-top: 1px solid var(--border); }
+.footer { padding: 48px 0 28px; background: var(--bg-2); border-top: 1px solid var(--border); }
 .footer-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text);
   font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; }
 .footer-tag { color: var(--muted); margin-top: 12px; max-width: 420px; }
