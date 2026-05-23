@@ -86,19 +86,40 @@
 
   /* ---- Scroll reveal animations ---- */
   const revealEls = document.querySelectorAll(".reveal");
+  const showReveal = (el) => {
+    const delay = el.dataset.delay || 0;
+    setTimeout(() => el.classList.add("visible"), delay);
+  };
+  // Trigger as soon as any pixel of an element enters the viewport, and pre-trigger
+  // slightly before it scrolls in. threshold:0 means tall blocks always reveal —
+  // otherwise a block taller than the viewport could never hit a % threshold and
+  // would stay invisible (looking like cut/missing content).
   const revealObserver = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const delay = entry.target.dataset.delay || 0;
-          setTimeout(() => entry.target.classList.add("visible"), delay);
+          showReveal(entry.target);
           obs.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0, rootMargin: "0px 0px -8% 0px" }
   );
   revealEls.forEach((el) => revealObserver.observe(el));
+  // Safety net: reveal anything already within the viewport on load, so no content
+  // can ever be stuck hidden if the observer misses an early/tall element.
+  const revealInView = () => {
+    revealEls.forEach((el) => {
+      if (el.classList.contains("visible")) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        showReveal(el);
+        revealObserver.unobserve(el);
+      }
+    });
+  };
+  window.addEventListener("load", revealInView);
+  revealInView();
 
   /* ---- Skill bars fill when in view ---- */
   const skillCards = document.querySelectorAll(".skill-card");
