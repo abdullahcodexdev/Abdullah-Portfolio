@@ -1,0 +1,12 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+
+# Original source files (not needed on the live site)
+WhatsApp Image*.jpeg
+New Text Document.txt
+Project Prompt.txt
+
+# Claude Code local config
+.claude/

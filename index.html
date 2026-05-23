@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Abdullah — Full-Stack Developer crafting fast, elegant, and scalable web experiences." />
+  <meta name="author" content="Muhammad Abdullah" />
+  <title>Muhammad Abdullah — Full-Stack Developer</title>
+
+  <!-- Favicon / tab logo -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon-180.png" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      document.documentElement.setAttribute("data-theme", saved || (prefersLight ? "light" : "dark"));
+    })();
+  </script>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120" tabindex="0">
+
+  <!-- Animated background grid + glow -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#hero">
+        <span class="brand-logo"><img src="assets/img/logo.jpeg" alt="Muhammad Abdullah" /></span>
+        <span class="brand-text">Muhammad<span class="text-accent"> Abdullah</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
+        aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-outline-ghost btn-sm px-3" href="assets/cv/Muhammad-Abdullah-CV.pdf" download="Muhammad-Abdullah-CV.pdf">
+              <i class="bi bi-download me-1"></i>Download CV
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-glow btn-sm px-3" href="#contact">Let's Talk</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode" title="Toggle theme">
+              <i class="bi bi-moon-stars-fill icon-dark"></i>
+              <i class="bi bi-sun-fill icon-light"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero section" id="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-7 col-lg-6">
+          <p class="hero-eyebrow reveal" data-reveal="up">
+            <span class="status-dot"></span> Available for freelance &amp; full-time
+          </p>
+          <h1 class="hero-title reveal" data-reveal="up" data-delay="80">
+            Hi, I'm <span class="gradient-text">Muhammad Abdullah</span>
+          </h1>
+          <h2 class="hero-subtitle reveal" data-reveal="up" data-delay="160">
+            Full-Stack Developer &amp; <span class="typed" id="typed"></span>
+          </h2>
+          <p class="hero-lead reveal" data-reveal="up" data-delay="240">
+            I design and build fast, elegant, and scalable web experiences — turning complex
+            ideas into clean, production-ready products with HTML, CSS, JavaScript, Python &amp; SQL.
+          </p>
+          <div class="hero-actions reveal" data-reveal="up" data-delay="320">
+            <a href="#projects" class="btn btn-glow btn-lg">
+              <i class="bi bi-rocket-takeoff me-2"></i>View My Work
+            </a>
+            <a href="#contact" class="btn btn-outline-ghost btn-lg">
+              <i class="bi bi-chat-dots me-2"></i>Hire Me
+            </a>
+          </div>
+          <div class="hero-stats reveal" data-reveal="up" data-delay="400">
+            <div class="stat">
+              <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 col-lg-6">
+          <div class="hero-visual reveal" data-reveal="zoom" data-delay="200">
+            <div class="hero-image-frame">
+              <img src="assets/img/hero.jpeg" alt="Muhammad Abdullah coding with futuristic interface" class="hero-image" />
+              <div class="hero-badge floaty">
+                <i class="bi bi-code-slash"></i>
+                <div>
+                  <strong>Clean Code</strong>
+                  <small>Production-ready</small>
+                </div>
+              </div>
+              <div class="hero-badge badge-2 floaty-slow">
+                <i class="bi bi-lightning-charge-fill"></i>
+                <div>
+                  <strong>Fast &amp; Optimized</strong>
+                  <small>Performance first</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">
+      <span class="mouse"><span class="wheel"></span></span>
+    </a>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head text-center reveal" data-reveal="up">
+        <span class="section-tag">01 — About</span>
+        <h2 class="section-title">Crafting code with <span class="gradient-text">purpose</span></h2>
+      </div>
+      <div class="row align-items-center g-5 mt-2">
+        <div class="col-12 col-lg-5 text-center">
+          <div class="about-img-wrap reveal" data-reveal="left">
+            <img src="assets/img/about.jpeg" alt="Portrait of Muhammad Abdullah" class="about-img" />
+            <div class="about-img-glow"></div>
+            <div class="about-exp">
+              <span class="exp-num">3+</span>
+              <span class="exp-text">Years of<br />Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="reveal" data-reveal="right">
+            <h3 class="about-heading">Hi, I'm Abdullah — a developer who loves turning ideas into reality.</h3>
+            <p class="about-text">
+              I'm a passionate full-stack developer focused on building digital products that are
+              not only functional but a genuine pleasure to use. From responsive front-ends to
+              robust back-end logic, I care about every pixel and every millisecond.
+            </p>
+            <p class="about-text">
+              I believe great software lives at the intersection of clean architecture, thoughtful
+              design, and obsessive attention to detail. Whether it's a marketing site, a dashboard,
+              or a data-driven app — I bring craftsmanship to the table.
+            </p>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-6">
+                <div class="about-feature"><i class="bi bi-check-circle-fill"></i> Responsive &amp; mobile-first</div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-feature"><i class="bi bi-check-circle-fill"></i> Clean, maintainable code</div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-feature"><i class="bi bi-check-circle-fill"></i> Performance optimized</div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-feature"><i class="bi bi-check-circle-fill"></i> Pixel-perfect UI</div>
+              </div>
+            </div>
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-glow">Get In Touch</a>
+              <a href="assets/cv/Muhammad-Abdullah-CV.pdf" download="Muhammad-Abdullah-CV.pdf" class="btn btn-link-arrow">Download CV <i class="bi bi-arrow-down-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-head text-center reveal" data-reveal="up">
+        <span class="section-tag">02 — Skills</span>
+        <h2 class="section-title">My technical <span class="gradient-text">toolkit</span></h2>
+        <p class="section-sub">The technologies I use to bring products to life.</p>
+      </div>
+      <div class="row g-4 mt-2">
+        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="0">
+          <div class="skill-card"><i class="bi bi-filetype-html skill-icon"></i><h4>HTML5</h4>
+            <div class="skill-bar"><span style="--lvl:95%"></span></div></div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="80">
+          <div class="skill-card"><i class="bi bi-filetype-css skill-icon"></i><h4>CSS3</h4>
+            <div class="skill-bar"><span style="--lvl:92%"></span></div></div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="160">
+          <div class="skill-card"><i class="bi bi-bootstrap-fill skill-icon"></i><h4>Bootstrap</h4>
+            <div class="skill-bar"><span style="--lvl:90%"></span></div></div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="240">
+          <div class="skill-card"><i class="bi bi-filetype-js skill-icon"></i><h4>JavaScript</h4>
+            <div class="skill-bar"><span style="--lvl:88%"></span></div></div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="320">
+          <div class="skill-card"><i class="bi bi-filetype-py skill-icon"></i><h4>Python</h4>
+            <div class="skill-bar"><span style="--lvl:85%"></span></div></div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="400">
+          <div class="skill-card"><i class="bi bi-database-fill skill-icon"></i><h4>SQL</h4>
+            <div class="skill-bar"><span style="--lvl:82%"></span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head text-center reveal" data-reveal="up">
+        <span class="section-tag">03 — Projects</span>
+        <h2 class="section-title">Selected <span class="gradient-text">work</span></h2>
+        <p class="section-sub">A few projects I'm proud to have built.</p>
+      </div>
+      <div class="row g-4 mt-2">
+        <!-- Project 1 -->
+        <div class="col-sm-6 col-lg-3 reveal" data-reveal="up">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/img/hero.jpeg" alt="Analytics dashboard project" style="object-position: center 45%;" />
+              <div class="project-overlay">
+                <a href="#" class="proj-btn"><i class="bi bi-eye"></i></a>
+                <a href="#" class="proj-btn"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat">Web App</span>
+              <h3>NovaBoard — Analytics Dashboard</h3>
+              <p>A real-time analytics dashboard with interactive charts, dark mode, and a Python/SQL backend serving live metrics.</p>
+              <div class="project-tags">
+                <span>JavaScript</span><span>Python</span><span>SQL</span><span>Chart.js</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-sm-6 col-lg-3 reveal" data-reveal="up" data-delay="120">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/img/profile-suit.jpeg" alt="E-commerce storefront project" style="object-position: center 30%;" />
+              <div class="project-overlay">
+                <a href="#" class="proj-btn"><i class="bi bi-eye"></i></a>
+                <a href="#" class="proj-btn"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat">E-Commerce</span>
+              <h3>LuxeCart — Storefront</h3>
+              <p>A premium, fully responsive e-commerce storefront with cart logic, filtering, and a smooth checkout experience.</p>
+              <div class="project-tags">
+                <span>HTML5</span><span>Bootstrap</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-sm-6 col-lg-3 reveal" data-reveal="up" data-delay="80">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/img/casual-1.jpeg" alt="SaaS landing page project" style="object-position: center 22%;" />
+              <div class="project-overlay">
+                <a href="#" class="proj-btn"><i class="bi bi-eye"></i></a>
+                <a href="#" class="proj-btn"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat">Landing Page</span>
+              <h3>Pulse — SaaS Marketing Site</h3>
+              <p>A conversion-focused SaaS landing page with scroll animations, micro-interactions, and a 98+ Lighthouse score.</p>
+              <div class="project-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- Project 4 -->
+        <div class="col-sm-6 col-lg-3 reveal" data-reveal="up" data-delay="200">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/img/casual-2.jpeg" alt="Task management app project" style="object-position: center 40%;" />
+              <div class="project-overlay">
+                <a href="#" class="proj-btn"><i class="bi bi-eye"></i></a>
+                <a href="#" class="proj-btn"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-cat">Productivity</span>
+              <h3>FlowTask — Team Manager</h3>
+              <p>A collaborative task manager with drag-and-drop boards, real-time sync, and a clean, distraction-free interface.</p>
+              <div class="project-tags">
+                <span>JavaScript</span><span>Python</span><span>SQL</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-head text-center reveal" data-reveal="up">
+        <span class="section-tag">04 — Services</span>
+        <h2 class="section-title">What I can do <span class="gradient-text">for you</span></h2>
+      </div>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6 col-lg-4 reveal" data-reveal="up">
+          <div class="service-card">
+            <div class="service-icon"><i class="bi bi-window-stack"></i></div>
+            <h3>Web Development</h3>
+            <p>Fast, responsive, and accessible websites built with modern HTML, CSS, and JavaScript best practices.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" data-reveal="up" data-delay="100">
+          <div class="service-card">
+            <div class="service-icon"><i class="bi bi-phone"></i></div>
+            <h3>Responsive UI Design</h3>
+            <p>Mobile-first, pixel-perfect interfaces that look stunning on every screen size using the Bootstrap grid.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" data-reveal="up" data-delay="200">
+          <div class="service-card">
+            <div class="service-icon"><i class="bi bi-hdd-network"></i></div>
+            <h3>Backend &amp; APIs</h3>
+            <p>Reliable server-side logic and clean REST APIs powered by Python, with well-structured SQL databases.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" data-reveal="up" data-delay="100">
+          <div class="service-card">
+            <div class="service-icon"><i class="bi bi-speedometer2"></i></div>
+            <h3>Performance Optimization</h3>
+            <p>Auditing and tuning sites for blazing speed, better Core Web Vitals, and higher search rankings.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" data-reveal="up" data-delay="200">
+          <div class="service-card">
+            <div class="service-icon"><i class="bi bi-database-check"></i></div>
+            <h3>Database Design</h3>
+            <p>Scalable, normalized SQL schemas and efficient queries that keep your data fast and consistent.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" data-reveal="up" data-delay="300">
+          <div class="service-card">
+            <div class="service-icon"><i class="bi bi-wrench-adjustable-circle"></i></div>
+            <h3>Maintenance &amp; Support</h3>
+            <p>Ongoing care, bug fixes, and feature updates to keep your product healthy and growing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head text-center reveal" data-reveal="up">
+        <span class="section-tag">05 — Contact</span>
+        <h2 class="section-title">Let's build something <span class="gradient-text">great</span></h2>
+        <p class="section-sub">Have a project in mind? Drop me a message and I'll get back to you soon.</p>
+      </div>
+      <div class="row g-5 mt-2 align-items-stretch">
+        <div class="col-lg-5 reveal" data-reveal="left">
+          <div class="contact-info">
+            <h3>Contact details</h3>
+            <p class="contact-intro">Prefer a direct line? Reach me through any of these.</p>
+            <ul class="contact-list">
+              <li><span class="ci-icon"><i class="bi bi-envelope-fill"></i></span>
+                <div><small>Email</small><a href="mailto:muhammadabdullah7544@gmail.com">muhammadabdullah7544@gmail.com</a></div></li>
+              <li><span class="ci-icon"><i class="bi bi-telephone-fill"></i></span>
+                <div><small>Phone</small><a href="tel:+923027544514">+92 302 7544514</a></div></li>
+              <li><span class="ci-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <div><small>Location</small><span>Bahawalnagar, Punjab, Pakistan</span></div></li>
+            </ul>
+            <div class="contact-socials">
+              <a href="https://github.com/abdullahcodexdev" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/muhammad-abdullah-66783812b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 reveal" data-reveal="right">
+          <form class="contact-form needs-validation" id="contactForm" novalidate
+                action="https://formspree.io/f/xnjrvrvb" method="POST">
+            <!-- Custom subject line for incoming emails -->
+            <input type="hidden" name="_subject" value="New message from your portfolio website" />
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required minlength="2" />
+                <div class="invalid-feedback">Please enter your name (at least 2 characters).</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required />
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="col-12">
+                <label for="subject" class="form-label">Subject <span class="optional">(optional)</span></label>
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="What's this about?" />
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell me about your project..." required minlength="10"></textarea>
+                <div class="invalid-feedback">Please enter a message (at least 10 characters).</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-glow btn-lg w-100">
+                  <i class="bi bi-send me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <i class="bi bi-check-circle-fill"></i> Thanks! Your message has been sent. I'll reply shortly.
+            </div>
+            <div class="form-error" id="formError">
+              <i class="bi bi-exclamation-triangle-fill"></i> Something went wrong. Please try again or email me directly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <a class="footer-brand" href="#hero"><span class="brand-mark">MA</span> Muhammad Abdullah</a>
+          <p class="footer-tag">Full-Stack Developer — building the web, one clean commit at a time.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="footer-socials">
+            <a href="https://github.com/abdullahcodexdev" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-abdullah-66783812b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="mailto:muhammadabdullah7544@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Muhammad Abdullah. All rights reserved.</p>
+        <p>Designed &amp; built with <i class="bi bi-heart-fill text-accent"></i> &amp; clean code.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
