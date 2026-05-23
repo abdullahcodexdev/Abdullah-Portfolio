@@ -133,12 +133,14 @@ section { position: relative; }
 /* Anchored sections land cleanly below the fixed navbar */
 section[id], header[id] { scroll-margin-top: 76px; }
 /* Contact: compact so the whole form fits in one view */
-#contact { padding: 36px 0 44px; }
-#contact .section-head { margin-bottom: 8px; }
-#contact .section-title { font-size: clamp(1.7rem, 3.2vw, 2.3rem); }
+#contact { padding: 24px 0 28px; }
+#contact .section-head { margin-bottom: 6px; }
+#contact .section-title { font-size: clamp(1.6rem, 3vw, 2.1rem); }
 #contact .section-sub { margin-top: 6px; margin-bottom: 0; }
-#contact .row { margin-top: 6px !important; }
-#contact .contact-form, #contact .contact-info { padding: 24px; }
+#contact .row { margin-top: 4px !important; }
+#contact .contact-form, #contact .contact-info { padding: 18px; }
+#contact .contact-form .row { --bs-gutter-y: .6rem; }
+#contact .form-label { margin-bottom: .25rem; }
 /* About sits right after the tall hero — trim its top gap */
 #about { padding-top: 50px; }
 .section-alt { background: linear-gradient(180deg, transparent, rgba(124,92,255,.04), transparent); }
