@@ -298,11 +298,18 @@ section[id], header[id] { scroll-margin-top: 76px; }
 .stat-label { color: var(--muted); font-size: .85rem; margin-top: 6px; }
 
 .hero-visual { position: relative; }
-.hero-image-frame { position: relative; border-radius: 24px; padding: 10px;
-  background: linear-gradient(140deg, rgba(0,229,255,.3), rgba(124,92,255,.2), rgba(255,92,168,.2));
-  box-shadow: var(--shadow); }
-.hero-image { width: 100%; border-radius: 18px; aspect-ratio: 4/5; object-fit: cover;
-  max-height: 72vh; filter: saturate(1.08) contrast(1.05) brightness(1.03); }
+.hero-image-frame { position: relative; border-radius: 22px; overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0,0,0,.45), 0 0 60px rgba(124,92,255,.16); }
+.hero-image { display: block; width: 100%; border-radius: 22px; aspect-ratio: 4/5; object-fit: cover;
+  max-height: 72vh; filter: saturate(1.08) contrast(1.05) brightness(1.03);
+  animation: heroZoom 16s ease-in-out infinite alternate; }
+@keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.07); } }
+/* Futuristic scan sweep across the image */
+.hero-image-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(115deg, transparent 32%, rgba(0,229,255,.14) 46%,
+    rgba(124,92,255,.12) 50%, rgba(255,92,168,.10) 54%, transparent 68%);
+  transform: translateX(-120%); animation: heroScan 7s ease-in-out infinite; }
+@keyframes heroScan { 0% { transform: translateX(-120%); } 55%, 100% { transform: translateX(120%); } }
 @media (max-width: 991px){ .hero-image { max-height: none; } }
 .hero-badge { position: absolute; display: flex; align-items: center; gap: 12px;
   background: rgba(20,20,42,.85); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--border);
@@ -535,7 +542,8 @@ section[id], header[id] { scroll-margin-top: 76px; }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; }
-  .floaty, .floaty-slow, .bg-orb, .status-dot, .wheel { animation: none !important; }
+  .floaty, .floaty-slow, .bg-orb, .status-dot, .wheel, .hero-image { animation: none !important; }
+  .hero-image-frame::after { animation: none !important; opacity: 0; }
   html { scroll-behavior: auto; }
 }
 
