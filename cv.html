@@ -21,7 +21,7 @@
       --head:"Sora",sans-serif; --body:"Space Grotesk",sans-serif;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#c9ccda;font-family:var(--body);color:var(--ink);padding:24px;line-height:1.55;}
+    body{background:#fff;font-family:var(--body);color:var(--ink);padding:24px;line-height:1.55;}
     /* A4 page */
     .page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;display:grid;
       grid-template-columns:74mm 1fr;box-shadow:0 20px 60px rgba(0,0,0,.25);overflow:hidden;}
@@ -48,33 +48,33 @@
     .lang-row span:last-child{color:#00d9f5;font-weight:600;}
 
     /* ===== Main ===== */
-    .main{padding:30px 30px 30px 32px;}
-    .main-sec{margin-bottom:22px;}
-    .main-sec .title{display:flex;align-items:center;gap:10px;font-family:var(--head);font-size:1.05rem;
-      font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);margin-bottom:12px;}
-    .main-sec .title i{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;
-      background:var(--grad);color:#fff;font-size:.95rem;}
-    .summary{font-size:.9rem;color:#3a3e54;}
+    .main{padding:24px 28px 22px 30px;background:#fff;}
+    .main-sec{margin-bottom:15px;}
+    .main-sec .title{display:flex;align-items:center;gap:9px;font-family:var(--head);font-size:1rem;
+      font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);margin-bottom:9px;}
+    .main-sec .title i{width:27px;height:27px;display:grid;place-items:center;border-radius:8px;
+      background:var(--grad);color:#fff;font-size:.9rem;}
+    .summary{font-size:.85rem;color:#3a3e54;}
 
-    .item{margin-bottom:15px;padding-left:16px;position:relative;border-left:2px solid var(--line);}
+    .item{margin-bottom:11px;padding-left:16px;position:relative;border-left:2px solid var(--line);}
     .item::before{content:"";position:absolute;left:-6px;top:3px;width:10px;height:10px;border-radius:50%;
       background:var(--grad);}
     .item .row1{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;}
-    .item h4{font-family:var(--head);font-size:.95rem;font-weight:700;color:var(--ink);}
-    .item .org{font-size:.85rem;color:var(--accent);font-weight:600;}
+    .item h4{font-family:var(--head);font-size:.93rem;font-weight:700;color:var(--ink);}
+    .item .org{font-size:.84rem;color:var(--accent);font-weight:600;}
     .item .date{font-size:.74rem;color:var(--muted);font-weight:600;white-space:nowrap;}
-    .item ul{margin:7px 0 0 16px;}
-    .item li{font-size:.83rem;color:#3a3e54;margin-bottom:4px;}
+    .item ul{margin:5px 0 0 16px;}
+    .item li{font-size:.82rem;color:#3a3e54;margin-bottom:3px;}
 
-    .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-    .proj{border:1px solid var(--line);border-radius:10px;padding:12px 13px;}
-    .proj h4{font-family:var(--head);font-size:.86rem;font-weight:700;color:var(--ink);margin-bottom:4px;}
-    .proj p{font-size:.76rem;color:#3a3e54;margin-bottom:7px;}
+    .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .proj{border:1px solid var(--line);border-radius:9px;padding:10px 11px;}
+    .proj h4{font-family:var(--head);font-size:.84rem;font-weight:700;color:var(--ink);margin-bottom:3px;}
+    .proj p{font-size:.75rem;color:#3a3e54;margin-bottom:6px;line-height:1.4;}
     .proj .ptags{display:flex;flex-wrap:wrap;gap:5px;}
     .proj .ptags span{font-size:.65rem;padding:2px 8px;border-radius:999px;background:#f1f2f9;color:var(--accent);font-weight:600;}
 
-    .edu-item{margin-bottom:11px;}
-    .edu-item h4{font-family:var(--head);font-size:.84rem;font-weight:700;}
+    .edu-item{margin-bottom:8px;}
+    .edu-item h4{font-family:var(--head);font-size:.83rem;font-weight:700;}
     .edu-item .meta{font-size:.76rem;color:var(--muted);}
 
     /* print button (screen only) */
@@ -84,8 +84,10 @@
 
     @media print{
       @page{size:A4;margin:0;}
+      *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
       body{background:#fff;padding:0;}
-      .page{box-shadow:none;margin:0;width:210mm;height:297mm;}
+      .page{box-shadow:none;margin:0;width:210mm;height:297mm;background:#fff;}
+      .main{background:#fff;}
       .printbar{display:none;}
       .side{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
     }
@@ -172,19 +174,19 @@
         <div class="title"><i class="bi bi-kanban"></i> Projects</div>
         <div class="proj-grid">
           <div class="proj">
-            <h4>LaraCommerce — E-Commerce Platform</h4>
-            <p>Full-featured online store with product catalog, cart, checkout, and a secure admin dashboard.</p>
-            <div class="ptags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+            <h4>Herbal Roots — Herbal E-Commerce</h4>
+            <p>Full-stack herbal products store with a slide-out AJAX cart, Stripe checkout, authentication, and an earthy animated UI.</p>
+            <div class="ptags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Stripe</span></div>
           </div>
           <div class="proj">
-            <h4>TaskFlow — Project Manager</h4>
-            <p>Team task-management app with role-based access, live status updates, and clean dashboards.</p>
-            <div class="ptags"><span>Laravel</span><span>JavaScript</span><span>jQuery</span></div>
+            <h4>Cloud-Convert — File Converter</h4>
+            <p>File-conversion platform supporting 80+ formats across documents, audio, video, images &amp; archives, with multi-file merging via FFmpeg.</p>
+            <div class="ptags"><span>Laravel</span><span>PHP</span><span>FFmpeg</span><span>Vue</span></div>
           </div>
           <div class="proj">
-            <h4>BizPortal — Business CRM</h4>
-            <p>Client, invoice, and reporting system with authentication and exportable analytics.</p>
-            <div class="ptags"><span>PHP</span><span>Laravel</span><span>MySQL</span></div>
+            <h4>Auth Studio — OAuth Login System</h4>
+            <p>Secure authentication system with Google &amp; Microsoft social login via Socialite, emailed password-reset codes, and two-step verification.</p>
+            <div class="ptags"><span>Laravel</span><span>PHP</span><span>OAuth</span><span>Socialite</span></div>
           </div>
           <div class="proj">
             <h4>MX Player — Media Player Clone</h4>
