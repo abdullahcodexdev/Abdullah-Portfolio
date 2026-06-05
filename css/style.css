@@ -372,6 +372,16 @@ section[id], header[id] { scroll-margin-top: 76px; }
 .tools-chips span:hover { transform: translateY(-3px); border-color: rgba(0,229,255,.4);
   box-shadow: 0 10px 24px rgba(0,229,255,.12); }
 
+/* Compact the Skills section so the cards + tools strip fit without overflow */
+#skills.section { padding-top: 38px; padding-bottom: 38px; }
+#skills .section-head { margin-bottom: 10px; }
+#skills .row { --bs-gutter-y: .9rem; margin-top: 0 !important; }
+#skills .skill-card { padding: 16px 16px; }
+#skills .skill-icon { font-size: 2.1rem; }
+#skills .skill-card h4 { margin: 9px 0 11px; font-size: .95rem; }
+#skills .tools-wrap { margin-top: 26px; }
+#skills .tools-title { margin-bottom: 14px; }
+
 /* ===== Projects ===== */
 .project-card { position: relative; border-radius: var(--radius); overflow: hidden;
   background: var(--surface); border: 1px solid var(--border); height: 100%;
