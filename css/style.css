@@ -371,14 +371,17 @@ section[id], header[id] { scroll-margin-top: 76px; }
 .tools-panel-title i { font-size: 1.15rem; background: var(--gradient); -webkit-background-clip: text;
   background-clip: text; -webkit-text-fill-color: transparent; }
 .tools-panel-sub { color: var(--muted); font-size: .84rem; margin-bottom: 18px; }
-.tools-chips { display: flex; flex-wrap: wrap; gap: 9px; }
-.tools-chips span { display: inline-flex; align-items: center; gap: 7px; font-size: .8rem; font-weight: 500;
-  padding: 7px 14px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border);
-  color: var(--text); transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
-.tools-chips span i { font-size: .9rem; background: var(--gradient); -webkit-background-clip: text;
-  background-clip: text; -webkit-text-fill-color: transparent; }
-.tools-chips span:hover { transform: translateY(-3px); border-color: rgba(0,229,255,.4);
-  box-shadow: 0 10px 24px rgba(0,229,255,.12); }
+.tools-chips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.tools-chips span { display: flex; align-items: center; gap: 9px; font-size: .82rem; font-weight: 500;
+  padding: 11px 14px; border-radius: 11px; background: var(--surface-2); border: 1px solid var(--border);
+  color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.tools-chips span i { flex: 0 0 auto; font-size: 1rem; background: var(--gradient);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.tools-chips span:hover { transform: translateY(-2px); border-color: rgba(0,229,255,.4);
+  box-shadow: 0 8px 20px rgba(0,229,255,.12); }
+@media (max-width: 991.98px){ .tools-chips { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 480px){ .tools-chips { grid-template-columns: repeat(2, 1fr); } }
 
 /* Compact the Skills section so both columns sit cleanly in one section */
 #skills.section { padding-top: 40px; padding-bottom: 40px; }
