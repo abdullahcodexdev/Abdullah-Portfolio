@@ -214,49 +214,56 @@
         <h2 class="section-title">My technical <span class="gradient-text">toolkit</span></h2>
         <p class="section-sub">The technologies I use to bring products to life.</p>
       </div>
-      <div class="row g-4 mt-2">
-        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="0">
-          <div class="skill-card"><i class="bi bi-filetype-html skill-icon"></i><h4>HTML &amp; CSS</h4>
-            <div class="skill-bar"><span style="--lvl:95%"></span></div></div>
+      <div class="row g-4 mt-2 align-items-stretch">
+        <!-- LEFT: core skill cards -->
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-6 reveal" data-reveal="up" data-delay="0">
+              <div class="skill-card"><i class="bi bi-filetype-html skill-icon"></i><h4>HTML &amp; CSS</h4>
+                <div class="skill-bar"><span style="--lvl:95%"></span></div></div>
+            </div>
+            <div class="col-6 reveal" data-reveal="up" data-delay="80">
+              <div class="skill-card"><i class="bi bi-bootstrap-fill skill-icon"></i><h4>Bootstrap</h4>
+                <div class="skill-bar"><span style="--lvl:90%"></span></div></div>
+            </div>
+            <div class="col-6 reveal" data-reveal="up" data-delay="160">
+              <div class="skill-card"><i class="bi bi-filetype-js skill-icon"></i><h4>JavaScript</h4>
+                <div class="skill-bar"><span style="--lvl:88%"></span></div></div>
+            </div>
+            <div class="col-6 reveal" data-reveal="up" data-delay="240">
+              <div class="skill-card"><i class="bi bi-filetype-php skill-icon"></i><h4>PHP</h4>
+                <div class="skill-bar"><span style="--lvl:90%"></span></div></div>
+            </div>
+            <div class="col-6 reveal" data-reveal="up" data-delay="320">
+              <div class="skill-card"><i class="bi bi-layers-fill skill-icon"></i><h4>Laravel</h4>
+                <div class="skill-bar"><span style="--lvl:88%"></span></div></div>
+            </div>
+            <div class="col-6 reveal" data-reveal="up" data-delay="400">
+              <div class="skill-card"><i class="bi bi-database-fill skill-icon"></i><h4>MySQL</h4>
+                <div class="skill-bar"><span style="--lvl:87%"></span></div></div>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="80">
-          <div class="skill-card"><i class="bi bi-bootstrap-fill skill-icon"></i><h4>Bootstrap</h4>
-            <div class="skill-bar"><span style="--lvl:90%"></span></div></div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="160">
-          <div class="skill-card"><i class="bi bi-filetype-js skill-icon"></i><h4>JavaScript</h4>
-            <div class="skill-bar"><span style="--lvl:88%"></span></div></div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="240">
-          <div class="skill-card"><i class="bi bi-filetype-php skill-icon"></i><h4>PHP</h4>
-            <div class="skill-bar"><span style="--lvl:90%"></span></div></div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="320">
-          <div class="skill-card"><i class="bi bi-layers-fill skill-icon"></i><h4>Laravel</h4>
-            <div class="skill-bar"><span style="--lvl:88%"></span></div></div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-4 reveal" data-reveal="up" data-delay="400">
-          <div class="skill-card"><i class="bi bi-database-fill skill-icon"></i><h4>MySQL</h4>
-            <div class="skill-bar"><span style="--lvl:87%"></span></div></div>
-        </div>
-      </div>
-
-      <!-- Tools & Integrations (real tech used across projects) -->
-      <div class="tools-wrap reveal" data-reveal="up" data-delay="120">
-        <h3 class="tools-title">Tools &amp; Integrations</h3>
-        <div class="tools-chips">
-          <span><i class="bi bi-hdd-network"></i> REST APIs</span>
-          <span><i class="bi bi-credit-card-2-front"></i> Stripe</span>
-          <span><i class="bi bi-shield-lock"></i> OAuth</span>
-          <span><i class="bi bi-box-arrow-in-right"></i> Socialite</span>
-          <span><i class="bi bi-arrow-repeat"></i> AJAX</span>
-          <span><i class="bi bi-puzzle"></i> Vue</span>
-          <span><i class="bi bi-wind"></i> Tailwind</span>
-          <span><i class="bi bi-film"></i> FFmpeg</span>
-          <span><i class="bi bi-phone"></i> Flutter</span>
-          <span><i class="bi bi-braces"></i> Dart</span>
-          <span><i class="bi bi-git"></i> Git</span>
-          <span><i class="bi bi-github"></i> GitHub</span>
+        <!-- RIGHT: tools & integrations panel -->
+        <div class="col-lg-5 reveal" data-reveal="right" data-delay="120">
+          <div class="tools-panel">
+            <h3 class="tools-panel-title"><i class="bi bi-stars"></i> Tools &amp; Integrations</h3>
+            <p class="tools-panel-sub">Platforms, APIs &amp; libraries I build with every day.</p>
+            <div class="tools-chips">
+              <span><i class="bi bi-hdd-network"></i> REST APIs</span>
+              <span><i class="bi bi-credit-card-2-front"></i> Stripe</span>
+              <span><i class="bi bi-shield-lock"></i> OAuth</span>
+              <span><i class="bi bi-box-arrow-in-right"></i> Socialite</span>
+              <span><i class="bi bi-arrow-repeat"></i> AJAX</span>
+              <span><i class="bi bi-puzzle"></i> Vue</span>
+              <span><i class="bi bi-wind"></i> Tailwind</span>
+              <span><i class="bi bi-film"></i> FFmpeg</span>
+              <span><i class="bi bi-phone"></i> Flutter</span>
+              <span><i class="bi bi-braces"></i> Dart</span>
+              <span><i class="bi bi-git"></i> Git</span>
+              <span><i class="bi bi-github"></i> GitHub</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

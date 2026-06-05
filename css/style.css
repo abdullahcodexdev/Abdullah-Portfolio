@@ -358,29 +358,34 @@ section[id], header[id] { scroll-margin-top: 76px; }
   transition: width 1.2s cubic-bezier(.2,.8,.2,1); }
 .skill-card.in-view .skill-bar span { width: var(--lvl); }
 
-/* ===== Tools & Integrations ===== */
-.tools-wrap { margin-top: 48px; text-align: center; }
-.tools-title { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 20px; }
-.tools-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-.tools-chips span { display: inline-flex; align-items: center; gap: 7px; font-size: .82rem;
-  font-weight: 500; padding: 8px 16px; border-radius: 999px; background: var(--surface);
-  border: 1px solid var(--border); color: var(--text);
-  transition: transform .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease; }
-.tools-chips span i { font-size: .95rem; background: var(--gradient); -webkit-background-clip: text;
+/* ===== Tools & Integrations panel (right column of Skills) ===== */
+.tools-panel { position: relative; height: 100%; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px;
+  overflow: hidden; display: flex; flex-direction: column; }
+.tools-panel::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gradient); }
+.tools-panel::after { content: ""; position: absolute; top: -50px; right: -50px; width: 170px; height: 170px;
+  background: radial-gradient(circle, rgba(124,92,255,.18), transparent 70%); pointer-events: none; }
+.tools-panel-title { font-size: 1.05rem; font-weight: 600; display: flex; align-items: center; gap: 10px;
+  margin-bottom: 6px; }
+.tools-panel-title i { font-size: 1.15rem; background: var(--gradient); -webkit-background-clip: text;
+  background-clip: text; -webkit-text-fill-color: transparent; }
+.tools-panel-sub { color: var(--muted); font-size: .84rem; margin-bottom: 18px; }
+.tools-chips { display: flex; flex-wrap: wrap; gap: 9px; }
+.tools-chips span { display: inline-flex; align-items: center; gap: 7px; font-size: .8rem; font-weight: 500;
+  padding: 7px 14px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border);
+  color: var(--text); transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.tools-chips span i { font-size: .9rem; background: var(--gradient); -webkit-background-clip: text;
   background-clip: text; -webkit-text-fill-color: transparent; }
 .tools-chips span:hover { transform: translateY(-3px); border-color: rgba(0,229,255,.4);
   box-shadow: 0 10px 24px rgba(0,229,255,.12); }
 
-/* Compact the Skills section so the cards + tools strip fit without overflow */
-#skills.section { padding-top: 38px; padding-bottom: 38px; }
-#skills .section-head { margin-bottom: 10px; }
-#skills .row { --bs-gutter-y: .9rem; margin-top: 0 !important; }
+/* Compact the Skills section so both columns sit cleanly in one section */
+#skills.section { padding-top: 40px; padding-bottom: 40px; }
+#skills .section-head { margin-bottom: 14px; }
 #skills .skill-card { padding: 16px 16px; }
 #skills .skill-icon { font-size: 2.1rem; }
 #skills .skill-card h4 { margin: 9px 0 11px; font-size: .95rem; }
-#skills .tools-wrap { margin-top: 26px; }
-#skills .tools-title { margin-bottom: 14px; }
 
 /* ===== Projects ===== */
 .project-card { position: relative; border-radius: var(--radius); overflow: hidden;
