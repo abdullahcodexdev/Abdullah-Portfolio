@@ -360,7 +360,7 @@ section[id], header[id] { scroll-margin-top: 76px; }
 
 /* ===== Tools & Integrations panel (right column of Skills) ===== */
 .tools-panel { position: relative; height: 100%; background: var(--surface);
-  border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px;
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px;
   overflow: hidden; display: flex; flex-direction: column; }
 .tools-panel::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
   background: var(--gradient); }
@@ -370,10 +370,10 @@ section[id], header[id] { scroll-margin-top: 76px; }
   margin-bottom: 6px; }
 .tools-panel-title i { font-size: 1.15rem; background: var(--gradient); -webkit-background-clip: text;
   background-clip: text; -webkit-text-fill-color: transparent; }
-.tools-panel-sub { color: var(--muted); font-size: .84rem; margin-bottom: 18px; }
-.tools-chips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-.tools-chips span { display: flex; align-items: center; gap: 9px; font-size: .82rem; font-weight: 500;
-  padding: 11px 14px; border-radius: 11px; background: var(--surface-2); border: 1px solid var(--border);
+.tools-panel-sub { color: var(--muted); font-size: .82rem; margin-bottom: 13px; }
+.tools-chips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.tools-chips span { display: flex; align-items: center; gap: 8px; font-size: .8rem; font-weight: 500;
+  padding: 8px 13px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--border);
   color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
 .tools-chips span i { flex: 0 0 auto; font-size: 1rem; background: var(--gradient);
@@ -384,8 +384,8 @@ section[id], header[id] { scroll-margin-top: 76px; }
 @media (max-width: 480px){ .tools-chips { grid-template-columns: repeat(2, 1fr); } }
 
 /* Compact the Skills section so both columns sit cleanly in one section */
-#skills.section { padding-top: 40px; padding-bottom: 40px; }
-#skills .section-head { margin-bottom: 14px; }
+#skills.section { padding-top: 24px; padding-bottom: 34px; }
+#skills .section-head { margin-bottom: 10px; }
 #skills .skill-card { padding: 16px 16px; }
 #skills .skill-icon { font-size: 2.1rem; }
 #skills .skill-card h4 { margin: 9px 0 11px; font-size: .95rem; }
