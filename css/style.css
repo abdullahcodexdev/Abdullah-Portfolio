@@ -358,6 +358,20 @@ section[id], header[id] { scroll-margin-top: 76px; }
   transition: width 1.2s cubic-bezier(.2,.8,.2,1); }
 .skill-card.in-view .skill-bar span { width: var(--lvl); }
 
+/* ===== Tools & Integrations ===== */
+.tools-wrap { margin-top: 48px; text-align: center; }
+.tools-title { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 20px; }
+.tools-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.tools-chips span { display: inline-flex; align-items: center; gap: 7px; font-size: .82rem;
+  font-weight: 500; padding: 8px 16px; border-radius: 999px; background: var(--surface);
+  border: 1px solid var(--border); color: var(--text);
+  transition: transform .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease; }
+.tools-chips span i { font-size: .95rem; background: var(--gradient); -webkit-background-clip: text;
+  background-clip: text; -webkit-text-fill-color: transparent; }
+.tools-chips span:hover { transform: translateY(-3px); border-color: rgba(0,229,255,.4);
+  box-shadow: 0 10px 24px rgba(0,229,255,.12); }
+
 /* ===== Projects ===== */
 .project-card { position: relative; border-radius: var(--radius); overflow: hidden;
   background: var(--surface); border: 1px solid var(--border); height: 100%;
