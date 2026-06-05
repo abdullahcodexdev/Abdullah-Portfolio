@@ -163,7 +163,7 @@
   /* ---- Typed effect in hero subtitle ---- */
   const typedEl = document.getElementById("typed");
   if (typedEl && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const words = ["UI Engineer", "Problem Solver", "Python Developer", "Creative Coder"];
+    const words = ["UI Engineer", "Problem Solver", "Laravel Developer", "Creative Coder"];
     let wi = 0, ci = 0, deleting = false;
     function type() {
       const word = words[wi];
