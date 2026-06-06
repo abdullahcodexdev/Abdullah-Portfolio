@@ -405,6 +405,14 @@ section[id], header[id] { scroll-margin-top: 76px; }
 .tl-card h3 { font-size: 1rem; font-weight: 600; margin: 5px 0 2px; }
 .tl-org { font-size: .84rem; color: var(--accent-2); font-weight: 600; }
 .tl-card p { font-size: .84rem; color: var(--muted); margin: 8px 0 0; }
+/* Compact the Experience section so all timeline cards fit without overflow */
+#experience.section { padding-top: 30px; padding-bottom: 32px; }
+#experience .section-head { margin-bottom: 8px; }
+#experience .timeline { margin-top: 18px; }
+#experience .tl-item { padding-bottom: 13px; }
+#experience .tl-card { padding: 12px 16px; }
+#experience .tl-card h3 { margin: 4px 0 2px; font-size: .96rem; }
+#experience .tl-card p { font-size: .82rem; margin-top: 5px; }
 
 /* ===== Process ===== */
 .proc-card { text-align: center; padding: 24px 18px; border: 1px solid var(--border); border-radius: var(--radius);
